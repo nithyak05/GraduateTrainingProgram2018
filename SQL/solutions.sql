@@ -55,6 +55,11 @@ SELECT NAME FROM EMPLOYEE WHERE MANAGERID NOT IN (SELECT E.NAME,E.E_ID FROM EMPL
  "5" "94791"
  
  
+ 10)Select the Employees who report to Natasha Stevens
+ select name from employee where managerid=(select e_id from employee where name='NATASHA STEVENS');
+ "ADAM WAYNE"
+"JOSEPH ANGELIN"
+ 
  11)Display the Employee name,Employee count,Dep name,Dept manager in the Health department
  select e.name,count(e.name),d.dep_name,d.dep_manager from employee e inner join dept d on e.dep_id=d.dep_id where d.dep_name="HEALTH";
  "JOHN HELLEN" "5" "HEALTH" "TIM ARCHER" 
@@ -106,6 +111,19 @@ SELECT NAME FROM EMPLOYEE WHERE MANAGERID NOT IN (SELECT E.NAME,E.E_ID FROM EMPL
    18)Select the total number of Employees in Dept id D04
      SELECT COUNT(NAME) FROM EMPLOYEE WHERE DEP_ID='D04';
      COUNT=3
+ 
+ 
+ 19)Select all department details of the Department with Maximum Employees
+select * from dept d inner join (select max(cnt),dep_id from(select count(e_id) as cnt,dep_id from employee group by dep_id)) as t on d.dep_id=t.dep_id;
+"D02" "COMMUNICATIONS" "ADAM JUSTIN" "6" "D02"
+ 
+ 
+ 
+ 20)Select the Employees who has Tim Cook as their manager
+ select e.name from employee e inner join dept d on e.dep_id=d.dep_id where d.dep_manager='TIM COOK';
+ 0 rows returned in 0ms
+     
+     
     
    
    
