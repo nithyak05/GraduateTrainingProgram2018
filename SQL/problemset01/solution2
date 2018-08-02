@@ -25,13 +25,14 @@ H235|Park Place|New York|1267|H235|N|175
 H235|Park Place|New York|1289|H235|N|195
 
 3)List the names and cities of all guests, ordered according to their cities.
-select name,city from guest order by city;
+select name,city from guest order by city,name;
 ROBERT SWIFT|ATLANTA
-TARA CUMMINGS|BALTIMORE
 EDWARD CANE|BALTIMORE
+TARA CUMMINGS|BALTIMORE
 TOM HANCOCK|PHILADELPHIA
 ADAM WAYNE|PITTSBURGH
 VANESSA PARRY|PITTSBURGH
+
 
 4)List all details for non-smoking rooms in ascending order of price.
 select * from room where type='N' order by price;
@@ -56,8 +57,13 @@ PHILADELPHIA
 ATLANTA
 
 7)List the average price of a room.
-select avg(price) from room;
-155.666666666667
+select avg(price),hotel_no from room group by hotel_no;
+145.0|H111
+162.5|H193
+185.0|H235
+124.0|H432
+147.5|H437
+170.0|H498
 
 8)List hotel names, their room numbers, and the type of that room.
 select h.name, r.room_no,r.type from hotel h inner join room r on h.hotel_no=r.hotel_no;
