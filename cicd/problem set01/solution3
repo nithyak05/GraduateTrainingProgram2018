@@ -1,0 +1,31 @@
+1. What is meant by a Working copy in Version control?
+The working copy is the local copy of files from a repository, at a specific time or revision. All work done to the files in a repository is initially done on a working copy.
+
+2. Which Git command is used to create a working copy of a repository on your machine?
+git init
+
+3. What is the use of the GIT pull command?
+GIT pull command is used to fetch the changes from remote server to local machine.
+
+4. Which GIT command is used to move an untracked change into the staging area?
+git add
+
+5. How do you set up your SSH key settings in Github? What is the use of setting up SSH key?
+Copy the contents of the output to your clipboard. Login to github.com and bring up your account settings by clicking the tools icon. Select SSH Keys from the side menu, then click the Add SSH key button. Name your key something whatever you like, and paste the contents of your clipboard into the Key text box.
+SSH is typically used to log into a remote machine and execute commands and it can transfer files using the associated SSH file transfer (SFTP) or secure copy (SCP) protocols.
+
+6. What is meant by a Branch in Version control? How do you create a new branch in GIT?
+Branch is used for separating projects that has a common code base and it will not affect the main code.
+When you do a pull request on a branch, you can continue to work on another branch and make another pull request on this other branch. Before creating a new branch, pull the changes from upstream. Your master needs to be up to date. When you want to commit something in your branch, be sure to be in your branch.
+
+7. Which branch gets created by default when you first create a repository in GIT?
+Master branch
+
+8. Which of these facts about GIT is accurate 
+b,d
+
+9. What is the difference between Git and Github?
+Git is a revision control system, a tool to manage your source code history whereas GitHub is a website where you can upload a copy of your Git repository.
+
+10. What is meant by a repository in version control?
+A repository is a central file storage location. It is used by version control systems to store multiple versions of files. While a repository can be configured on a local machine for a single user, it is often stored on a server, which can be accessed by multiple users.
