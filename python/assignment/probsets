@@ -1,0 +1,174 @@
+'''You are asked to ensure that the first and last names of people begin with a capital letter in their passports. For example, alison heck should be capitalised correctly as Alison Heck.
+
+alison heck => Alison Heck
+
+Given a full name, your task is to capitalize the name appropriately.
+
+a=raw_input("enter name:")
+if(len(a)>0 and len(a)<1000):
+    b=a.split(' ')
+    b=int(b)
+    list=[]
+    for i in b:
+        if(b[i].isalnum()):
+            list.append(i.capitalize())
+print(' '.join(list))
+
+'''enter name:123ba nithya
+123ba Nithya'''
+
+
+'''You have a record of  students. Each record contains the student's name, and their percent marks in Maths, Physics and Chemistry. The marks can be floating values. The user enters some integer  followed by the names and marks for students. You are required to save the record in a dictionary data type. The user then enters a student's name. Output the average percentage marks obtained by that student, correct to two decimal places.
+
+student={}
+count=raw_input("Enter the student count")
+for i in range(int(count)):
+    name=raw_input("Enter the name")
+    mark_list=[]
+    for j in range(3):
+        marks=input()
+        mark_list.append(marks)
+        student[name]=mark_list
+print(student)
+name=raw_input()
+if name in student:
+    sum1=sum(student[name])
+    avg=sum1/3
+    print(round(avg,2))
+else:
+    print("No such student in the list")
+    
+Enter the student count3
+Enter the namenithya
+89
+90
+87
+Enter the nameroja
+85
+88
+76
+Enter the namejai
+78
+98
+85
+{'nithya': [89, 90, 87], 'roja': [85, 88, 76], 'jai': [78, 98, 85]}
+roja
+83.0
+    
+Task:-
+
+You are given two values a and b . 
+Perform integer division and print a/b .
+
+Output Format
+
+Print the value of . 
+In the case of ZeroDivisionError or ValueError, print the error code.
+
+
+    def div_fn():
+    try:
+        c=int(a)/int(b)
+        print(c)
+    except Exception as error:
+        print(error)
+count=raw_input("enter count")
+for i in range(int(count)):
+    a=(raw_input("enter num1"))
+    b=(raw_input("enter num2"))
+    div_fn()	
+
+
+enter count3
+enter num11
+enter num20
+integer division or modulo by zero
+enter num12
+enter num2$
+invalid literal for int() with base 10: '$'
+enter num13
+enter num21
+3
+
+Input Format:-
+
+The first line contains an integer, n , denoting the number of commands. 
+Each line i of the n  subsequent lines contains one of the commands described above.
+
+Output Format:-
+
+For each command of type print, print the list on a new line.
+
+
+list=[]
+count=input("enter the count:")
+count=int(count)
+for i in range(count):
+    command=input("enter the command:")
+    if (command=='insert'):
+        a=input("enter the integer e and position i:")
+        b=a.split(' ')
+        list.insert(int(b[0]),int(b[1]))
+    elif (command=='print'):
+        print(list)
+    elif (command=='remove'):
+        c=input("element to be removed:")
+        list.remove(int(b[1]))
+    elif (command=='append'):
+        d=input("element to be appended:")
+        list.append(int (d))
+    elif (command=='sort'):
+        list.sort()
+    elif (command=='pop'):
+        list.pop(int(b[0]))
+    elif (command=='reverse'):
+        list.reverse()
+print(list)
+
+enter the count:12
+enter the command:insert
+enter the integer e and position i:0 5
+enter the command:insert
+enter the integer e and position i:1 10
+enter the command:insert
+enter the integer e and position i:0 6
+enter the command:print
+[6, 5, 10]
+enter the command:remove
+element to be removed:6
+enter the command:append
+element to be appended:9
+enter the command:append
+element to be appended:1
+enter the command:sort
+enter the command:print
+[1, 5, 9, 10]
+enter the command:pop
+enter the command:reverse
+enter the command:print
+[10, 9, 5]
+[10, 9, 5]
+
+Process finished with exit code 0
+
+Print the three most common characters along with their occurrence count each on a separate line. 
+Sort output in descending order of occurrence count. 
+If the occurrence count is the same, sort the characters in alphabetical order.
+
+def count_word(str):
+   # print([i for i in range (len(str)) for j in range(len(str))])
+
+    for i in range(len(str)):
+        count=0
+        for j in range(len(str)):
+            if(str[i]==str[j]):
+                count=count+1
+        if(count>1):
+            dict[str[i]]=count
+    print(dict)
+dict={}
+str=input("enter a word:")
+count_word(str)
+
+enter a word:google
+{'g': 2, 'o': 2}
