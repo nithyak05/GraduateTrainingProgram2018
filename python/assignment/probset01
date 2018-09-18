@@ -1,0 +1,89 @@
+31st Aug 2018
+submission by n.c.karthikeyan@accenture.com
+
+1)get first name and last name from user and print your full name 
+
+'''a=raw_input("enter first name")
+b=raw_input("enter last name")
+print(a)
+print(b)
+print("the input user entered"+str(a) +str(b))
+print("Firstname %s,Lastname %s"%(a,b))'''
+
+'''enter first namenithya
+enter last namekarthik
+nithya
+karthik
+the input user enterednithyakarthik
+Firstname nithya,Lastname karthik
+'''
+
+
+2) get your full name, age as input from user and print first name and last name , age using string slicing
+ i) 2 raw_input get name  and age 
+ ii) print first name and last name and age 
+
+'''a=raw_input("enter full name")
+b=raw_input("enter age")
+b=int(b)
+print(a)
+print(b)
+print("firstname"+str(a[0:6]))
+print("lastname"+str(a[6:]))
+print("age"+str(b))'''
+
+'''enter full namenithya karthik
+enter age22
+nithya karthik
+22
+firstnamenithya
+lastname karthik
+age22'''
+
+
+ 3)Calculating your birth number in numerology
+26/11/1978
+2+6+1+1+1+7+8 = 8
+
+'''a="05/05/1996"
+b=a.split("/")
+print(b)
+c=map(int,b)
+print c
+d=sum(c)
+print d
+e=map(int,str(d))
+print e
+result=sum(e)
+print result
+
+['05', '05', '1996']
+[5, 5, 1996]
+2006
+[2, 0, 0, 6]
+8'''
+
+
+4) Write a Python program to perform sum of three given integers. 
+       However, if any of the two values are equal then sum will be zero (eg : 2+1+1 = 0)
+
+'''a=raw_input("enter 1st num")
+b=raw_input("enter 2nd num")
+c=raw_input("enter 3rd num")
+a=int(a)
+b=int(b)
+c=int(c)
+if(a==b or b==c or c==a):
+  print("sum is 0")
+else:
+  print(a+b+c)
+
+enter 1st num5
+enter 2nd num4
+enter 3rd num4
+sum is 0
+
+enter 1st num5
+enter 2nd num7
+enter 3rd num9
+21'''
